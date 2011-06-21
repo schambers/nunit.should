@@ -7,37 +7,37 @@ namespace NUnit.Should
 {
 	public static class NUnitExtensions
 	{
-		public static void ShouldBeTrue(this bool expected)
+		public static void ShouldBeTrue(this bool actual)
 		{
-			Assert.IsTrue(expected);
+			Assert.IsTrue(actual);
 		}
 
-		public static void ShouldBeFalse(this bool expected)
+		public static void ShouldBeFalse(this bool actual)
 		{
-			Assert.IsFalse(expected);
+			Assert.IsFalse(actual);
 		}
 
-		public static void ShouldNotBeNull<T>(this T expected)
+		public static void ShouldNotBeNull<T>(this T actual)
 		{
-			Assert.IsNotNull(expected);
+			Assert.IsNotNull(actual);
 		}
 
-		public static void ShouldBeNull<T>(this T expected)
+		public static void ShouldBeNull<T>(this T actual)
 		{
-			Assert.IsNull(expected);
+			Assert.IsNull(actual);
 		}
 
-		public static void ShouldBeGreaterThan<T>(this T expected, T actual) where T : IComparable
+		public static void ShouldBeGreaterThan<T>(this T actual, T expected) where T : IComparable
 		{
 			Assert.Greater(expected, actual);
 		}
 
-		public static void ShouldBe<T>(this T expected, T actual)
+		public static void ShouldBe<T>(this T actual, T expected)
 		{
 			Assert.AreEqual(expected, actual);
 		}
 
-		public static void ShouldBeSameAs<T>(this T expected, T actual)
+		public static void ShouldBeSameAs<T>(this T actual, T expected)
 		{
 			Assert.AreSame(expected, actual);
 		}
